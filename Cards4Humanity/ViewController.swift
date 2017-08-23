@@ -44,6 +44,7 @@ class ViewController: UIViewController {
             self.timer()
         }
         
+        // At first play, hide game instructions
         howToPlayInstrLbl.isHidden = true
         howToPlayTitleLbl.isHidden = true
         
