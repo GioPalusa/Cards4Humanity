@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerScore: UILabel!
     @IBOutlet weak var CPUScore: UILabel!
     
+    var game = Player()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,6 @@ class ViewController: UIViewController {
 
     var playerScoreNumber = 0
     var CPUScoreNumber = 0
-    
     
     @IBAction func dealBtnPressed(_ sender: Any) {
         let cardsArray = ["ace", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "jack", "queen", "king"]
@@ -57,12 +57,21 @@ class ViewController: UIViewController {
         _ = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.finishedRound), userInfo: nil, repeats: false);
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let results = segue.destination as? finalScreenVC {
+            results.game = game
+        }
+    }
+    
     @objc func finishedRound() {
-        print("TIMER FINISHED")
-        playerScoreNumber = 0
-        CPUScoreNumber = 0
-        playerScore.text = ("\(playerScoreNumber)")
-        CPUScore.text = ("\(CPUScoreNumber)")
+//        playerScoreNumber = 0
+//        CPUScoreNumber = 0
+//        playerScore.text = ("\(playerScoreNumber)")
+//        CPUScore.text = ("\(CPUScoreNumber)")
+        
+        game.CPUScore = CPUScoreNumber
+        game.playerScore = playerScoreNumber
+        
         performSegue(withIdentifier: "endOfGame", sender: self)
     }
     

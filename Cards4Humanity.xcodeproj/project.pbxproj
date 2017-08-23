@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC027B121F4CD1400098D098 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC027B111F4CD1400098D098 /* Player.swift */; };
+		AC5FE8371F4D69BE00B583AD /* finalScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5FE8361F4D69BE00B583AD /* finalScreenVC.swift */; };
 		ACD06DD71F4C29720046DA2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD06DD61F4C29720046DA2F /* AppDelegate.swift */; };
 		ACD06DD91F4C29720046DA2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD06DD81F4C29720046DA2F /* ViewController.swift */; };
 		ACD06DDC1F4C29720046DA2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD06DDA1F4C29720046DA2F /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		AC027B111F4CD1400098D098 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AC5FE8361F4D69BE00B583AD /* finalScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalScreenVC.swift; sourceTree = "<group>"; };
 		ACD06DD31F4C29710046DA2F /* Cards4Humanity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards4Humanity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD06DD61F4C29720046DA2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD06DD81F4C29720046DA2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				ACD06DDF1F4C29720046DA2F /* LaunchScreen.storyboard */,
 				ACD06DE21F4C29720046DA2F /* Info.plist */,
 				AC027B111F4CD1400098D098 /* Player.swift */,
+				AC5FE8361F4D69BE00B583AD /* finalScreenVC.swift */,
 			);
 			path = Cards4Humanity;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC027B121F4CD1400098D098 /* Player.swift in Sources */,
+				AC5FE8371F4D69BE00B583AD /* finalScreenVC.swift in Sources */,
 				ACD06DD91F4C29720046DA2F /* ViewController.swift in Sources */,
 				ACD06DD71F4C29720046DA2F /* AppDelegate.swift in Sources */,
 			);
