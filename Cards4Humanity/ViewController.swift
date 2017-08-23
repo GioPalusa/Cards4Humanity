@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightCard: UIImageView!
     @IBOutlet weak var playerScore: UILabel!
     @IBOutlet weak var CPUScore: UILabel!
+    @IBOutlet weak var howToPlayTitleLbl: UILabel!
+    @IBOutlet weak var howToPlayInstrLbl: UILabel!
+    
     
     // Initialize player class to local variable to save score
     var game = Player()
@@ -40,6 +43,9 @@ class ViewController: UIViewController {
         if playerScoreNumber == 0 && CPUScoreNumber == 0 {
             self.timer()
         }
+        
+        howToPlayInstrLbl.isHidden = true
+        howToPlayTitleLbl.isHidden = true
         
         // Grab random value for both CPU and Player
         // 13 cards, in the array ranging from 0-12

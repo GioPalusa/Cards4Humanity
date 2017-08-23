@@ -30,11 +30,11 @@ class finalScreenVC: UIViewController {
         
         // set win / loose / tie text to label
         if playerScore! > CPUScore! {
-            winOrLooseLbl.text = "Yay! You won!"
+            winOrLooseLbl.text = "Yay! You won with \(playerScore! - CPUScore!) points!"
         } else if playerScore! == CPUScore! {
             winOrLooseLbl.text = "So close! It was a tie!"
         } else {
-            winOrLooseLbl.text = "Oh snap! You lost"
+            winOrLooseLbl.text = "Oh snap! You lost with \(CPUScore! - playerScore!) points."
         }
     }
 

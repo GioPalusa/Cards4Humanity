@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Struct to save scores, so these can be transferred between views
 struct Player {
     var playerScore: Int!
     var CPUScore: Int!
