@@ -10,6 +10,7 @@ import UIKit
 
 class finalScreenVC: UIViewController {
     
+    // Fetch player from separate class
     var game: Player!
     
     @IBOutlet weak var playerScoreLbl: UILabel!
@@ -18,11 +19,16 @@ class finalScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Make local variables with player & CPU score
         let playerScore = game.playerScore
         let CPUScore = game.CPUScore
+        
+        // Set labels with the results from the game
         playerScoreLbl.text = "\(playerScore!)"
         CPUScoreLbl.text = "\(CPUScore!)"
         
+        // set win / loose / tie text to label
         if playerScore! > CPUScore! {
             winOrLooseLbl.text = "Yay! You won!"
         } else if playerScore! == CPUScore! {
@@ -30,7 +36,6 @@ class finalScreenVC: UIViewController {
         } else {
             winOrLooseLbl.text = "Oh snap! You lost"
         }
-        
     }
 
     // When reset button is pressed. Dismiss the modal ViewController to go back to game
