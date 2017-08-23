@@ -14,7 +14,8 @@ class finalScreenVC: UIViewController {
     
     @IBOutlet weak var playerScoreLbl: UILabel!
     @IBOutlet weak var CPUScoreLbl: UILabel!
-
+    @IBOutlet weak var winOrLooseLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let playerScore = game.playerScore
@@ -22,9 +23,20 @@ class finalScreenVC: UIViewController {
         playerScoreLbl.text = "\(playerScore!)"
         CPUScoreLbl.text = "\(CPUScore!)"
         
-        print("TIMER FINISHED. Player has \(playerScore!) & CPU has \(CPUScore!)")
+        if playerScore! > CPUScore! {
+            winOrLooseLbl.text = "Yay! You won!"
+        } else if playerScore! == CPUScore! {
+            winOrLooseLbl.text = "So close! It was a tie!"
+        } else {
+            winOrLooseLbl.text = "Oh snap! You lost"
+        }
+        
     }
 
+    // When reset button is pressed. Dismiss the modal ViewController to go back to game
+    @IBAction func resetGameBtnPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 
 }

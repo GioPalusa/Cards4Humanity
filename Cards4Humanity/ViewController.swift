@@ -64,15 +64,18 @@ class ViewController: UIViewController {
     }
     
     @objc func finishedRound() {
-//        playerScoreNumber = 0
-//        CPUScoreNumber = 0
-//        playerScore.text = ("\(playerScoreNumber)")
-//        CPUScore.text = ("\(CPUScoreNumber)")
-        
         game.CPUScore = CPUScoreNumber
         game.playerScore = playerScoreNumber
         
         performSegue(withIdentifier: "endOfGame", sender: self)
+        
+        playerScoreNumber = 0
+        CPUScoreNumber = 0
+        playerScore.text = ("\(playerScoreNumber)")
+        CPUScore.text = ("\(CPUScoreNumber)")
+        leftCard.image = UIImage(named: "back")
+        rightCard.image = UIImage(named: "back")
+        
     }
     
 }
